@@ -1,0 +1,1 @@
+savedcmd_/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/modules.order := {   echo /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/disk.o; :; } > /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/modules.order

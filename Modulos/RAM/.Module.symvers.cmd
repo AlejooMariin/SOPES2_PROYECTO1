@@ -1,0 +1,1 @@
+savedcmd_/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/RAM/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/RAM/Module.symvers -T /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/RAM/modules.order -i Module.symvers -e 

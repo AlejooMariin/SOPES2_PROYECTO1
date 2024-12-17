@@ -1,0 +1,1 @@
+savedcmd_/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/disk.mod := printf '%s\n'   disk.o | awk '!x[$$0]++ { print("/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/"$$0) }' > /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/disk.mod

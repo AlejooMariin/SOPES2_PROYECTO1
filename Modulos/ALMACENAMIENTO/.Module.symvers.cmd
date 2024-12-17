@@ -1,0 +1,1 @@
+savedcmd_/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/Module.symvers -T /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/modules.order -i Module.symvers -e 

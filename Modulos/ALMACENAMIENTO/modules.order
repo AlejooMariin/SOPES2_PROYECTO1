@@ -1,0 +1,1 @@
+/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/ALMACENAMIENTO/disk.o

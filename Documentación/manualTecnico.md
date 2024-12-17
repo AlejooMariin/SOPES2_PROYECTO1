@@ -2,8 +2,25 @@
 
 ## José Alejandro Grande Marín - 201602855
 
-## Error 1.
+## Configuraciones 
 
+[Configuración del Kernel](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/configKernel.md)
+
+## Archivos involucrados 
+    - syscall_64.tbl 
+    - main.c 
+    - open.c 
+    - read_write.c 
+    - syscalls.h 
+    - uts.h 
+    - Kernel 
+    - usac (carpeta ajena al kernel) 
+    - Makefile 
+    - sys.c 
+
+## Errores presentados
+
+## Error 1.
 
 El siguiente error se debe a que no se linkeo correctamente el archivo del repositorio al kernel original , lo que ocacionaba que este no encontrara las funciones ya que no estaban siendo agregadas en el archivo original , porque este no era el archivo que estaba sufriendo los cambios.
 

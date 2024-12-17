@@ -12,7 +12,7 @@ la solucion al error es ejecutar el siguiente comando
 ln -s rutadondeestaelarchivo rutadondeestaraelsymlink
 ```
 
-![Kernel Configuration](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_4.jpg)
+![Kernel Configuration](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_4.jepg)
 
 # Cronograma/Bitacora.
 

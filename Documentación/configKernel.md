@@ -1,5 +1,7 @@
 # Configuración de kernel.
 
+## José Alejandro Grande Marín - 201602855
+
 ## Paso 1.
 Instalar linux mint cinammon 22, virtualmente , con suficiente capacidad ram y nucleos.
 

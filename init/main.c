@@ -893,7 +893,7 @@ void start_kernel(void)
 	boot_cpu_init();
 	page_address_init();
 	pr_notice("%s", linux_banner);
-	pr_notice("Bienvenido - Nombre: José Alejandro Grande Marín\n");
+	pr_notice("\032[1;31mBienvenido - Nombre: Jose Alejandro Grande Marin\032[0m\n");
 	early_security_init();
 	setup_arch(&command_line);
 	setup_boot_config();
@@ -1007,8 +1007,12 @@ void start_kernel(void)
 	 * this. But we do want output early, in case something goes wrong.
 	 */
 
-	printk(KERN_ALERT "José Alejandro Grande Marín\n");
-
+	printk(KERN_WARNING "############################################\n");
+	printk(KERN_WARNING "## UNIVERSIDAD DE SAN CARLOS DE GUATEMALA ##\n");
+	printk(KERN_WARNING "## ISTEMAS OPERATIVOS 2 DICIEMBRE 2024    ##\n");
+	printk(KERN_WARNING "## Jose Alejandro Grande Marin            ##\n");
+	printk(KERN_WARNING "## 201602855                              ##\n");
+	printk(KERN_WARNING "############################################\n");
 
 	console_init();
 	if (panic_later)

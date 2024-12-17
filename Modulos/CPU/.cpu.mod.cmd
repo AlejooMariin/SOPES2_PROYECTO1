@@ -1,0 +1,1 @@
+savedcmd_/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/CPU/cpu.mod := printf '%s\n'   cpu.o | awk '!x[$$0]++ { print("/home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/CPU/"$$0) }' > /home/alejo/Documents/REPOSITORIO/SOPES2_PROYECTO1/Modulos/CPU/cpu.mod

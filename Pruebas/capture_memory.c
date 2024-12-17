@@ -7,6 +7,7 @@ struct mem_snapshot {
     unsigned long free_memory;
     unsigned long active_pages;
     unsigned long inactive_pages;
+
 };
 
 int main() {

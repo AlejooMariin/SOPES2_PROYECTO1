@@ -22,10 +22,8 @@ gcc -o nombre_archivo_ejecutable nombre_arhivo.c
 ```bash
 sudo ./nombre_archivo_ejecutable
 ```
+Correr Ejecutable y obtener Resultados
 ![Correr Ejecutable](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_6.png)
-
-Resultados
-![Correr Ejecutable](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_7.png)
 
 
 ## Ejecucion de Modulos
@@ -47,8 +45,9 @@ cat /proc/cpu_so2_201602855
 
 Resultados 
 
-![Correr Ejecutable](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_8.png)
+![Correr Ejecutable](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_7.png)
 
 
-## Resumen 
+## Comentario General 
 
+Las funcionalidades desarrolladas para obtener las estadisticas esperadas pueden llegar a ser funcionalidades mas optimas y exactas, por lo que las soluciones vistas en este proyecto pueden no son definitivas , con un poco mas de investigacion y analisis se pueden llegar a obtener mejores resultados a lo interno e iniciar con mejores practicas a nivel de codigo.

@@ -1,22 +1,26 @@
 # Configuración de kernel.
 
 ## Paso 1.
-Instalar linux mint, ya sea de forma virtual o local, se recomienda fisica si la computadora no tiene demasiados nucleos.
+Instalar linux mint cinammon 22, virtualmente , con suficiente capacidad ram y nucleos.
 
 ## Paso 2.
-Una vez instalado el sistema se comenzara con la configración del kernel a modificar ya que se busca que aun que se corropan un kernel el sistema no sea inutilizable, para esto debemos descargar un kernel nuevo:
+Se continua con la configuración del kernel a modificar , se procede a descargar un kernel nuevo:
+
+ejecutando el siguiente comando dentro de una terminal se nos generara un paquete comprimido .xz , siendo este el que contiene el kernel que se modificara.
 
 ```bash
 wget https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.8.tar.xz
 ```
-ejecutando el comando anterior dentro de la terminal de mint obtendremos un .xz el cual es un archivo comprimodo donde se encuentra el kernel que modificaremos, para descomprimirlo hay varias formas pero en nuestro caso usaremos la terminal de mint.
+
+
+
+Para descomprimir el archivo podemos utilizar el siguiente comando , al descomprimir el archivo se genera una carpeta con el nombre `linux-6.8` con el archivo descomprimido e identificando su ubicacion (esta puede ser la ubicacion a eleccion) nos iremos al archivo `Makefile` en el cual podemos modificar la linea que tiene por encabezado `EXTRAVERSION` para poder dar un nuevo alias al kernel y no confundirlo con el original, para este proyecto se agregara  `-49-usac1`.
 
 ```bash
 tar -xf linux-6.8.tar.xz
 ```
-Una vez descomprimido el archivo se nos genera una carpeta con el nombre `linux-6.8` teniendo ya esto en nuestra ubicación prefererida debemos realizar unas minimas modificaciones para distinguirla del kernel oficial, para esto iremos al archivo `Makefile` en el cual modificaremos la linea que tiene por encabezado `EXTRAVERSION` en nuestro caso agregamos `-49-usac1` con el objetivo de tener una distinción para el kernel que estaremos manejando, luego de realizar estos cambios debemos correr algunos comandos para actualizar el grub y que las configuraciones se efectuen sobre el sistema. 
 
-Para que los cambios tengan efecto en el sistema operativo haremos lo siguiente:
+Para que los cambios realizados para la identificacion del kernelse vean reflejados en el sistema operativo se ejecutaran los siguientes pasos:
 1.- Instalaremos algunas dependecias/credenciales, ejecutando los siguientes comandos.
 
 ```bash
@@ -34,19 +38,20 @@ cp -v /boot/config-$(uname -r) .config
 sudo update-grub2
 ```
 
-Realizando los pasos anterirores luego de que el sistema se haya reiniciado podemos validar si nuestra configuración surtio efecto ejecuatando el comando `uname -r` esto nos lanzara en consola un mensaje como este `linux-6.8-49-usac1`.
+Al momento de reiniciar la maquina , se debe mostrar un menu en el inicio del sistema en donde nos aparecera el kernel que contendra el alias que le dimos y procedemos a seleccionarlo, ya dentro del sistema abriremos una terminal en la cual para validar sobre que kernel estamos ejecutaremos el siguiente comando `uname -r` esto nos mostrara en consola un mensaje como este `linux-6.8-49-usac1`.
 
-![Kernel Configuration](https://github.com/KESM12/SO2_201602404_VD2024/blob/main/Documentaci%C3%B3n/images/kernel.png)
+![Kernel Configuration](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_1.jpg)
 
 ## Paso 3.
-Configuración de symlinks para evitar cargar todo el kernel al repositorio.
-1.- Ubicar el archivo que se desea linkear. 
-2.- Validar la ruta y crear todas las carpetas necesarias que hagan referencia dentro del kernel.
+Configuración de symlinks.
+1.- agregar al repositorio los archivos de interes
+1.- configurar todos los archivos en las rutas similares a las del kernel original. 
+2.- realizar el acceso del archivo que se encuentra en el repositorio a la ruta del kernel original.
 3.- En la terminal ejecutar el comando `ln -s rutadondeestaelarchivo rutadondeestaraelsymlink`
 
-![Symlink Configuration](https://github.com/KESM12/SO2_201602404_VD2024/blob/main/Documentaci%C3%B3n/images/symlink.png)
+![Symlink Configuration](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_2.png)
 
 ## Paso 4.
-En este paso ya sabemos como linkear archivo y carpetas (es el mismo proceso) desde nuestro repositorio a nuestro kernel entonces podemos avanzar con la modificación del kernel. 
+Conociendo el procedimiento de configurar symlinks, se realiza con todos los archivos de interes
 
-Despues de todos los pasos anteriores cada vez que realicemos un cambio o que queramos compilar un cambio pues se recomienda utilizar el archivo ![Compilación](https://github.com/brianmatus/VD2024-so2-lab/blob/master/help%20scripts/compile_and_install.sh) para mayor facilidad, se recomienda leerlo para saber que opciones tomar pero en lo personal me salto el make clean unas 5 veces y luego le doy que si y enter a todas las demas opciones.
+Realizando todos los pasos mencionados ateriormente, para cada cambio que se realice y se suba al repositorio se recomienda ejecutar el archivo de compilacion.sh con el siguiente comando `sudo -s` y `bash compile_and_install.sh` ![Compilación](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_3.png) , para comprender la funcionalidad del archivo leerlo. y poder saber que aceptar y que no. 

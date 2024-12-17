@@ -6,6 +6,13 @@
 #include <time.h>  
 #include <sys/types.h>
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define YELLOW "\033[33m"
+#define CYAN "\033[36m"
+
 struct timespec64 {
     long tv_sec;   
     long tv_nsec;  
@@ -27,10 +34,11 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    // Imprimir resultados
+    printf(BLUE "#########################################################################\n");
     for (int i = 0; i < MAX_SYS_CALLS; i++) {
-        printf("Syscall ID %d: Count = %lu\n", i, statistics[i].count);
+        printf(YELLOW "Syscall ID " RESET YELLOW "%d" RESET ": " GREEN "Count = %lu\n" RESET, i, statistics[i].count);
     }
+    printf(BLUE "#########################################################################\n");
 
     return EXIT_SUCCESS;
 }

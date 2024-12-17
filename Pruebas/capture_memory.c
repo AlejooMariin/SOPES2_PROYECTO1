@@ -2,6 +2,12 @@
 #include <unistd.h>
 #include <sys/syscall.h>
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define YELLOW "\033[33m"
+
 struct mem_snapshot {
     unsigned long total_memory;
     unsigned long free_memory;
@@ -13,12 +19,16 @@ struct mem_snapshot {
 int main() {
     struct mem_snapshot snapshot;
     if (syscall(548, &snapshot) == 0) {
-        printf("Total Memory: %lu KB\n", snapshot.total_memory);
-        printf("Free Memory: %lu KB\n", snapshot.free_memory);
-        printf("Active Pages: %lu\n", snapshot.active_pages);
-        printf("Inactive Pages: %lu\n", snapshot.inactive_pages);
+
+    printf(BLUE "#########################################################################\n");    
+    printf(YELLOW "Total Memory: " RESET GREEN "%lu KB\n" RESET, snapshot.total_memory);
+    printf(YELLOW "Free Memory: " RESET GREEN "%lu KB\n" RESET, snapshot.free_memory);
+    printf(YELLOW "Active Pages: " RESET GREEN "%lu\n" RESET, snapshot.active_pages);
+    printf(YELLOW "Inactive Pages: " RESET GREEN "%lu\n" RESET, snapshot.inactive_pages);
+    printf(BLUE "#########################################################################\n");   
+
     } else {
-        perror("Syscall failed");
+        perror(RED "Syscall error");
     }
     return 0;
 }

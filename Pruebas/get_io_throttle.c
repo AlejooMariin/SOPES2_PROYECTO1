@@ -5,6 +5,12 @@
 #include <errno.h>
 #include <string.h>
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define YELLOW "\033[33m"
+#define CYAN "\033[36m"
 #define SYSCALL_GET_IO_THROTTLE 550 
 
 struct io_stats {
@@ -29,11 +35,14 @@ int main(int argc, char *argv[]) {
         return errno;
     }
 
-    printf("Estadísticas de I/O para PID %d:\n", pid);
-    printf("Bytes leídos: %lu\n", stats.bytes_read);
-    printf("Bytes escritos: %lu\n", stats.bytes_written);
-    printf("Syscalls de lectura: %lu\n", stats.read_syscalls);
-    printf("Syscalls de escritura: %lu\n", stats.write_syscalls);
+    printf(BLUE "#########################################################################\n");
+    printf(CYAN "Estadísticas de I/O para PID " RESET YELLOW "%d:\n" RESET, pid);
+    printf(YELLOW "Bytes leídos:      " RESET GREEN "%lu\n" RESET, stats.bytes_read);
+    printf(YELLOW "Bytes escritos:    " RESET GREEN "%lu\n" RESET, stats.bytes_written);
+    printf(YELLOW "Syscalls de lectura: " RESET GREEN "%lu\n" RESET, stats.read_syscalls);
+    printf(YELLOW "Syscalls de escritura: " RESET GREEN "%lu\n" RESET, stats.write_syscalls);
+    printf(BLUE "#########################################################################\n");
+
 
     return 0;
 }

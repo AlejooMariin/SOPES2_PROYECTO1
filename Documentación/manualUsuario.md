@@ -8,6 +8,9 @@ Comprender y manipular las funcionalidades internas del kernel es clave para opt
 - Exponer la información del sistema de forma accesible.
 - Documentar y validar el funcionamiento de los módulos.
 
+## Bienvenida del sistema
+Al modificar el kernel se le agrega una bienvenida la cual puede ser al gusto del usuario. para este proyecto se agrega la siguiente.
+![Mensaje de Bienvenida](https://github.com/AlejooMariin/SOPES2_PROYECTO1/blob/main/Documentaci%C3%B3n/imagenes/Imagen_8.png)
 
 ## Ejecucion de Pruebas Syscall
 

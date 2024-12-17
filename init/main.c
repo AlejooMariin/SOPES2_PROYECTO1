@@ -1007,12 +1007,12 @@ void start_kernel(void)
 	 * this. But we do want output early, in case something goes wrong.
 	 */
 
-	printk(KERN_WARNING "############################################\n");
-	printk(KERN_WARNING "## UNIVERSIDAD DE SAN CARLOS DE GUATEMALA ##\n");
-	printk(KERN_WARNING "## ISTEMAS OPERATIVOS 2 DICIEMBRE 2024    ##\n");
-	printk(KERN_WARNING "## Jose Alejandro Grande Marin            ##\n");
-	printk(KERN_WARNING "## 201602855                              ##\n");
-	printk(KERN_WARNING "############################################\n");
+	printk(KERN_CRIT "############################################\n");
+	printk(KERN_CRIT "## UNIVERSIDAD DE SAN CARLOS DE GUATEMALA ##\n");
+	printk(KERN_CRIT "## ISTEMAS OPERATIVOS 2 DICIEMBRE 2024    ##\n");
+	printk(KERN_CRIT "## Jose Alejandro Grande Marin            ##\n");
+	printk(KERN_CRIT "## 201602855                              ##\n");
+	printk(KERN_CRIT "############################################\n");
 
 	console_init();
 	if (panic_later)

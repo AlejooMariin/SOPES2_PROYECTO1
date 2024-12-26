@@ -638,10 +638,12 @@ asmlinkage long sys_sched_rr_get_interval(pid_t pid,
 asmlinkage long sys_sched_rr_get_interval_time32(pid_t pid,
 						 struct old_timespec32 __user *interval);
 asmlinkage long sys_restart_syscall(void);
-asmlinkage long sys_alejo_capture_memory_snapshot(struct mem_snapshot *snapshot); //memoria
+asmlinkage long sys_alejo_capture_memory_snapshot(struct mem_snapshot *snapshot); 
 asmlinkage long sys_alejo_track_syscall_usage(void);
-asmlinkage long sys_alejo_get_io_throttle(pid_t pid, struct io_stats *stats); //leer los datos io
-// 3 anteriores para el proyecto.
+asmlinkage long sys_alejo_get_io_throttle(pid_t pid, struct io_stats *stats); 
+asmlinkage long sys_alejo_tamalloc(size_t size, void __user **user_ptr); //tamalloc
+asmlinkage long sys_alejo_tod_mem_stats(struct total_mem_stats __user *totals);
+//declaracion
 asmlinkage long sys_kill(pid_t pid, int sig);
 asmlinkage long sys_tkill(pid_t pid, int sig);
 asmlinkage long sys_tgkill(pid_t tgid, pid_t pid, int sig);

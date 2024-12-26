@@ -429,6 +429,10 @@
 548 common alejo_capture_memory_snapshot sys_alejo_capture_memory_snapshot
 549 common alejo_track_syscall_usage sys_alejo_track_syscall_usage
 550 common alejo_get_io_throttle sys_alejo_get_io_throttle
+551 common alejo_tamalloc sys_alejo_tamalloc
+552 common alejo_ind_mem_stats sys_alejo_ind_mem_stats
+553 common alejo_tod_mem_stats sys_alejo_tod_mem_stats
+
 # This is the end of the legacy x32 range.  Numbers 548 and above are
 # not special and are not to be used for x32-specific syscalls.
 

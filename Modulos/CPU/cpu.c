@@ -99,11 +99,11 @@ static int __init modulo_init(void)
     entry = proc_create("cpu_so2_201602855", 0444, NULL, &archivo_operaciones);
     if (!entry)
     {
-        printk(KERN_ERR "cpu_so2_201602855: Fallo al crear /proc/cpu_so2_201602855\n");
+        printk(KERN_ERR "cpu_so2_201602855: Error al crear /proc/cpu_so2_201602855\n");
         return -ENOMEM;
     }
 
-    printk(KERN_INFO "cpu_so2_201602855: Módulo cargado correctamente\n");
+    printk(KERN_INFO "cpu_so2_201602855: Módulo cargado \n");
     return 0;
 }
 
@@ -111,7 +111,7 @@ static int __init modulo_init(void)
 static void __exit modulo_cleanup(void)
 {
     remove_proc_entry("cpu_so2_201602855", NULL);
-    printk(KERN_INFO "cpu_so2_201602855: Módulo removido correctamente\n");
+    printk(KERN_INFO "cpu_so2_201602855: Módulo removido \n");
 }
 
 module_init(modulo_init);

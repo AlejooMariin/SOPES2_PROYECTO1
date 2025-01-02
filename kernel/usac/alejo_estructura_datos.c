@@ -8,6 +8,7 @@
 #include <linux/resource.h>
 #include <linux/sched.h>
 
+
 // Definición de la estructura de la lista enlazada
 typedef struct memory_limitation {
     pid_t pid;

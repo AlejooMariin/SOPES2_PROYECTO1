@@ -4,4 +4,4 @@ obj-y += io_throttle.o
 obj-y += alejo_tamalloc.o
 obj-y += alejo_estadisticas_ind.o
 obj-y += alejo_estadisticas_tod.o
-obj-y += alejo_mani_mem.o
+obj-y += alejo_estructura_datos.o

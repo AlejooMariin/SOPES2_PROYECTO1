@@ -1,14 +1,16 @@
 !<thin>
-//                                              122       `
+//                                              140       `
 memory_snapshot.o/
 track_syscalls.o/
 io_throttle.o/
 alejo_tamalloc.o/
 alejo_estadisticas_ind.o/
 alejo_estadisticas_tod.o/
+alejo_mani_mem.o/
 /0              0           0     0     644     257296    `
 /19             0           0     0     644     224072    `
 /37             0           0     0     644     219864    `
 /52             0           0     0     644     217456    `
 /70             0           0     0     644     238416    `
 /96             0           0     0     644     225328    `
+/122            0           0     0     644     283608    `

@@ -432,6 +432,11 @@
 551 common alejo_tamalloc sys_alejo_tamalloc
 552 common alejo_ind_mem_stats sys_alejo_ind_mem_stats
 553 common alejo_tod_mem_stats sys_alejo_tod_mem_stats
+557 common alejo_add_memory_limit sys_alejo_add_memory_limit
+558 common alejo_get_memory_limits sys_alejo_get_memory_limits
+559 common alejo_update_memory_limit sys_alejo_update_memory_limit
+560 common alejo_remove_memory_limit sys_alejo_remove_memory_limit
+
 
 # This is the end of the legacy x32 range.  Numbers 548 and above are
 # not special and are not to be used for x32-specific syscalls.

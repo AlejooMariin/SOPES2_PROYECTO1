@@ -5,6 +5,13 @@
 #include <errno.h>
 #include <string.h>
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define YELLOW "\033[33m"
+#define CYAN "\033[36m"
+
 #define MAX_PROCESSES 1024
 
 struct process_mem_stats {
@@ -16,8 +23,10 @@ struct process_mem_stats {
 };
 
 void print_table_header() {
-    printf("%-10s %-15s %-15s %-10s %-10s\n", "PID", "Reserved (KB)", "Committed (KB)", "Pct (%)", "OOM Score");
-    printf("%-10s %-15s %-15s %-10s %-10s\n", "----------", "---------------", "---------------", "----------", "----------");
+    printf(BLUE "#########################################################################\n");    
+    printf(RESET YELLOW "%-10s %-15s %-15s %-10s %-10s\n", "PID", "Reserved (KB)", "Committed (KB)", "Pct (%)", "OOM Score");
+    printf(RESET CYAN "%-10s %-15s %-15s %-10s %-10s\n", "----------", "---------------", "---------------", "----------", "----------");
+    printf(BLUE "#########################################################################\n");    
 }
 
 void print_process_stats(struct process_mem_stats *stats) {

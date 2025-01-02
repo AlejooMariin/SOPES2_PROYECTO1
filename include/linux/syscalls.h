@@ -643,6 +643,11 @@ asmlinkage long sys_alejo_track_syscall_usage(void);
 asmlinkage long sys_alejo_get_io_throttle(pid_t pid, struct io_stats *stats); 
 asmlinkage long sys_alejo_tamalloc(size_t size, void __user **user_ptr); //tamalloc
 asmlinkage long sys_alejo_tod_mem_stats(struct total_mem_stats __user *totals);
+
+asmlinkage long sys_alejo_add_memory_limit(pid_t process_pid, size_t memory_limit);
+asmlinkage long sys_alejo_get_memory_limits(struct memory_limitation __user *u_processes_buffer, size_t max_entries, int __user *processes_returned);
+asmlinkage long sys_alejo_update_memory_limit(pid_t process_pid, size_t memory_limit);
+asmlinkage long sys_alejo_remove_memory_limit(pid_t process_pid);
 //declaracion
 asmlinkage long sys_kill(pid_t pid, int sig);
 asmlinkage long sys_tkill(pid_t pid, int sig);

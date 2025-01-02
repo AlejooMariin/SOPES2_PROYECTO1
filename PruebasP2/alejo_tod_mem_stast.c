@@ -5,6 +5,13 @@
 #include <unistd.h>
 #include <errno.h>
 
+#define RESET "\033[0m"
+#define RED "\033[31m"
+#define GREEN "\033[32m"
+#define BLUE "\033[34m"
+#define YELLOW "\033[33m"
+#define CYAN "\033[36m"
+
 #define SYS_alejo_tod_mem_totals 553
 
 // Estructura para los totales de memoria
@@ -25,9 +32,11 @@ int main() {
     }
 
     // Imprimir los totales
-    printf("Totales del sistema:\n");
-    printf("  Memoria Reservada Total: %lu MB\n", totals.total_reserved_mb);
-    printf("  Memoria Comprometida Total: %lu MB\n", totals.total_committed_mb);
+    printf(GREEN "#########################################################################\n");    
+    printf(RESET BLUE "Totales del sistema:\n");
+    printf(RESET BLUE "  Memoria Reservada Total:" RESET YELLOW "%lu MB\n", totals.total_reserved_mb);
+    printf(RESET BLUE "  Memoria Comprometida Total:" RESET YELLOW "%lu MB\n", totals.total_committed_mb);
+    printf(RESET GREEN "#########################################################################\n");    
 
     return EXIT_SUCCESS;
 }
